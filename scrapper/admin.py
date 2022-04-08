@@ -7,7 +7,7 @@ class ScrapeAdmin(admin.ModelAdmin):
     pass
 
 class ResultsAdmin(admin.ModelAdmin):
-    pass
+    list_display =  ('Scrape', 'date', 'matches')
 
 admin.site.register(Scrape, ScrapeAdmin)
 admin.site.register(Results, ResultsAdmin)
