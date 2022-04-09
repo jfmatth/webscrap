@@ -9,7 +9,7 @@ class Scrape(models.Model):
         return f'{self.site} - {self.keyword}'
 
 
-class Results(models.Model):
+class Result(models.Model):
     Scrape      = models.ForeignKey(Scrape, on_delete=models.CASCADE)
 
     date        = models.DateTimeField()
