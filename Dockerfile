@@ -13,6 +13,7 @@ COPY --from=PIPENV /usr/src/pipenv/requirements.txt /usr/src/app/
 RUN pip install -r /usr/src/app/requirements.txt
 
 COPY . /usr/src/app
+RUN python manage.py collectstatic --no-input
 
 ENTRYPOINT ["waitress-serve"]
-CMD ["--host=0.0.0.0", "--port=80", "webscrap.wsgi:application"]
+CMD ["--listen:0.0.0.0:80", "webscrap.wsgi:application"]
