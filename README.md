@@ -6,7 +6,7 @@ This was a personal project of mine to find particular names on popular news sit
 
 ## Installing
 
-A standard Django app using a custom command.
+A standard Django app using a custom command.  See pipfile for all packages installed.
 
 Technologies :
 - Pipenv
@@ -14,6 +14,7 @@ Technologies :
 - Kubernetes / Helm (optional)
 - dj-database-url
 - waitress WSGI
+- whitenoise
 
 ## Usage
 
