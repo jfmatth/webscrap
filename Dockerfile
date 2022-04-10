@@ -16,4 +16,4 @@ COPY . /usr/src/app
 RUN python manage.py collectstatic --no-input
 
 ENTRYPOINT ["waitress-serve"]
-CMD ["--listen:0.0.0.0:80", "webscrap.wsgi:application"]
+CMD ["--listen=0.0.0.0:80", "webscrap.wsgi:application"]
