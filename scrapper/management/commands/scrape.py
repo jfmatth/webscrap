@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from scrapper.models import Scrape, Results
+from scrapper.models import Scrape, Result
 
 from django.utils import timezone
 
@@ -19,7 +19,7 @@ class Command(BaseCommand):
             r = requests.get(s.site)
             n = r.text.count(s.keyword)
 
-            x = Results(
+            x = Result(
                 Scrape = s,
                 date = timezone.now(),
                 contents = r.text,
