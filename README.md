@@ -57,6 +57,9 @@ python manage.py scrape
 
 Run the server again, and validate the results in the Result table.
 
+7. Run on PIKU
+- Adjust settings.py to account for DJ_DATABASE
+
 ## Installation - Kubernetes
 
 Requirements:
